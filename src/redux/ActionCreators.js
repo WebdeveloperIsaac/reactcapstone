@@ -17,6 +17,7 @@ export const postComment = (dishId, rating, author, comment) => (dispatch) => {
     comment: comment
   }
   newComment.date = new Date().toISOString();
+  // Storing Comment For that Dish
 
   return fetch(baseUrl + 'comments', {
       method: 'POST',
